@@ -1,0 +1,257 @@
+﻿@model IEnumerable<WebShopping.Core.Objects.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutClient.cshtml";
+}
+
+<!-- slider -->
+<div class="slider">
+    <div class="owl-carousel owl-one owl-theme">
+        <div class="item">
+            <div class="slider-img">
+                <img src="./images/slider_1.jpg" alt="">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-8 col-sm-6 col-xs-12">
+                        <div class="slider-captions">
+                            <div class="brand-img">
+                                <img src="./images/mi_logo.png" alt="">
+                            </div>
+                            <h1 class="slider-title">Red Mi <span>Y1</span></h1>
+                            <p class="hidden-xs">LED Selfie-light | Fingerprint sensor | Dedicated microSD card slot Snapdragon 435 octa-core processor </p>
+                            <p class="slider-price">$138.99 </p>
+                            <a href="#" class="btn btn-primary btn-lg hidden-xs">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="slider-img"><img src="./images/slider_2.jpg" alt=""></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-8 col-sm-6 col-xs-12">
+                        <div class="slider-captions">
+                            <div class="brand-img">
+                                <img src="./images/google_logo.png" alt="">
+                            </div>
+                            <h1 class="slider-title">Google Pixel 2</h1>
+                            <p class="hidden-xs">The latest Qualcomm Snapdragon 835 processor | Water-resistant metal unibody | Up to 7 hours of battery.</p>
+                            <p class="slider-price">$ 938.10</p>
+                            <a href="#" class="btn btn-primary btn-lg hidden-xs">Download Free Template</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="slider-img"><img src="./images/slider_3.jpg" alt=""></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-8 col-sm-6 col-xs-12">
+                        <div class="slider-captions">
+                            <div class="brand-img">
+                                <img src="./images/apple_logo.png" alt="">
+                            </div>
+                            <h1 class="slider-title">iphone 8 plus  </h1>
+                            <p class="hidden-xs">
+                                5.5 inch Retina HD Display | 12MP wide-angle cameras
+                                <br> | 64 GB &amp; 256 GB ROM Memory
+                            </p>
+                            <p class="slider-price">$759.64</p>
+                            <a href="#" class="btn btn-primary btn-lg hidden-xs">Download Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.slider -->
+<!-- mobile showcase -->
+<div class="col-sm-2" id="mess" style="margin-top:100px">
+    <div class="alert @TempData["Style"]">
+        <strong>@TempData["Status"]</strong> @TempData["Message"]
+    </div>
+</div>
+<div class="space-medium">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="showcase-block">
+                    <div class="display-logo ">
+                        <a href="#"> <img src="~/images/nexus.png" alt=""></a>
+                    </div>
+                    <div class="showcase-img">
+                        <a href="#"> <img src="~/images/productdemo/nexus1-removebg-preview.png"  alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="showcase-block active">
+                    <div class="display-logo alignleft">
+                        <a href="#">
+                            <img src="~/images/iphone.png" alt="">
+                        </a>
+                    </div>
+                    <div class="showcase-img">
+                        <a href="#"> <img src="~/images/productdemo/demoIphoneX1.png" alt="" style="padding-left: 80px;"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="showcase-block ">
+                    <div class="display-logo ">
+                        <a href="#">
+                            <img src="~/images/samsung.png" alt="">
+                        </a>
+                    </div>
+                    <div class="showcase-img">
+                        <a href="#"><img src="~/images/productdemo/samsung-removebg-preview.png" style="height:175px;padding-bottom:10px" alt="">                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="showcase-block">
+                    <div class="display-logo ">
+                        <a href="#"><img src="~/images/htc.png" alt=""></a>
+                    </div>
+                    <div class="showcase-img">
+                        <a href="#"><img src="~/images/productdemo/htc-removebg-preview.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="showcase-block">
+                    <div class="display-logo">
+                        <a href="#">  <img src="~/images/alcatel.png" alt=""></a>
+                    </div>
+                    <div class="showcase-img">
+                        <a href="#">
+                            <img src="~/images/productdemo/alcatel1-removebg-preview.png" style="height:175px" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="showcase-block">
+                    <div class="display-logo ">
+                        <a href="#"><img src="~/images/pixel.png" alt=""></a>
+                    </div>
+                    <div class="showcase-img">
+                        <a href="#">    <img src="~/images/productdemo/pixel-removebg-preview.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="showcase-block">
+                    <div class="display-logo ">
+                        <a href="#">  <img src="~/images/vivo.png" alt=""></a>
+                    </div>
+                    <div class="showcase-img">
+                        <a href="#"><img src="~/images/productdemo/vivo-removebg-preview.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.mobile showcase -->
+<!-- latest products -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="box">
+                <div class="box-head">
+                    <h3 class="head-title">Latest Product</h3>
+                </div>
+                <div class="box-body">
+                    <div class="row">
+                        <!-- product -->
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="product-block">
+                                    <div class="product-img"><img src="~/images/products/@item.Image" alt=""></div>
+                                    <div class="product-content">
+                                        <h5><a href="#" class="product-title">@item.Name <strong>(128GB, Black)</strong></a></h5>
+                                        <div class="product-meta">
+                                            <a href="#" class="product-price">$@item.UnitPrice.ToString("#,##")</a>
+                                            <a href="#" class="discounted-price">$1400</a>
+                                            <span class="offer-price">20%off</span>
+                                        </div>
+                                        <div class="shopping-btn">
+                                            <a href="#" class="product-btn btn-like"><i class="fa fa-heart"></i></a>
+                                            <a href="@Url.Action("CreateCart","Cart",new { id = item.Id, url = Request.Url.ToString() })" class="product-btn btn-cart"><i class="fa fa-shopping-cart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        <!-- /.product -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.latest products -->
+<!-- seller products -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="box">
+                <div class="box-head">
+                    <h3 class="head-title">Best Seller Product</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product-carousel">
+        <div class="box-body">
+            <div class="row">
+                <div class="owl-carousel owl-two owl-theme">
+                    <!-- product -->
+                    @foreach (var item in Model)
+                    {
+                        <div class="item">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="product-block">
+                                    <div class="product-img"><img src="~/images/products/@item.Image" alt=""></div>
+                                    <div class="product-content">
+                                        <h5><a href="#" class="product-title">@item.Name <strong>(32 GB, Gold)</strong></a></h5>
+                                        <div class="product-meta">
+                                            <a href="#" class="product-price">$@item.UnitPrice.ToString("#,##")</a>
+                                            <a href="#" class="discounted-price">$2000</a>
+                                            <span class="offer-price">20%off</span>
+                                        </div>
+                                        <div class="shopping-btn">
+                                            <a href="#" class="product-btn btn-like"><i class="fa fa-heart"></i></a>
+                                            <a href="@Url.Action("CreateCart","Cart",new { id = item.Id, url = Request.Url.ToString() })" class="product-btn btn-cart"><i class="fa fa-shopping-cart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.product -->
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.seller products -->
+<!-- featured products -->
+
+<script>
+    setTimeout(function () {
+        $("#mess").remove();
+    },5000);
+</script>

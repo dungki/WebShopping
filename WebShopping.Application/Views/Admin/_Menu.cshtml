@@ -1,0 +1,77 @@
+﻿<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="@Url.Action("Index","Admin")">
+        <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Admin <sup>2</sup></div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+        <a class="nav-link" href="@Url.Action("Index", "Products")">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Go to Shop</span>
+        </a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Action
+    </div>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+           aria-expanded="true" aria-controls="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Order</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="@Url.Action("Index","Orders")">All Order</a>
+                <a class="collapse-item" href="@Url.Action("OrderSuccess","Orders")">Order Success</a>
+                <a class="collapse-item" href="@Url.Action("OrderFalse","Orders")">Order Failed</a>
+                <a class="collapse-item" href="@Url.Action("DeliverySuccess","Orders")">Delivery Success</a>
+                <a class="collapse-item" href="@Url.Action("DeliveryFalse","Orders")">Delivery Failed</a>
+                <a class="collapse-item" href="@Url.Action("CancelOrder","Orders")">Cancel Ordes</a>
+                <div class="collapse-divider"></div>
+                <a class="collapse-item" href="@Url.Action("DeletedOrder", "Orders")">Deleted Orders</a>
+            </div>
+        </div>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="@Url.Action("Index","AdminProducts")">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Products</span>
+        </a>
+    </li>
+    <!-- Nav Item - Charts -->
+    <li class="nav-item">
+        <a class="nav-link" href="@Url.Action("Index","Members")">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Member</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="@Url.Action("Index","Customers")">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Customer</span>
+        </a>
+    </li>
+
+    <!-- Nav Item - Tables -->
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+
+    <!-- Sidebar Toggler (Sidebar) -->
+
+</ul>
+

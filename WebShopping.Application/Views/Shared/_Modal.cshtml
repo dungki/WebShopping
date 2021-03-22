@@ -1,0 +1,91 @@
+﻿<div class="modal fade" id="exampleModalCenterLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+            {
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Email</label>
+                        <input type="text" class="form-control" placeholder=" " name="Email" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-form-label">Password</label>
+                        <input type="password" class="form-control" placeholder=" " name="Password" required="">
+                    </div>
+
+                    <br />
+                    <span style="color:red">@TempData["ErrMess"]</span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModalCenterRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Register</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            @using (Html.BeginForm("Register", "Login", FormMethod.Post))
+            {
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="Account" class="col-form-label">Account</label>
+                        <input type="text" class="form-control" placeholder=" " name="Account" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Email</label>
+                        <input type="text" class="form-control" placeholder=" " name="Email" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder=" " name="Name" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="address" class="col-form-label">Address</label>
+                        <input type="text" class="form-control" placeholder=" " name="Address" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-form-label">Password</label>
+                        <input type="password" class="form-control" placeholder=" " name="Password" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="col-form-label">Phone</label>
+                        <input type="text" class="form-control" placeholder=" " name="Phone" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="question" class="col-form-label">Question</label>
+                        <input type="text" class="form-control" placeholder=" " name="Question" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="answer" class="col-form-label">Answer</label>
+                        <input type="text" class="form-control" placeholder=" " name="Answer" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="membershiptype" class="col-form-label">Membership Type: Normal</label>
+                    </div>
+                    <br />
+                    <span style="color:red">@TempData["ErrMess"]</span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

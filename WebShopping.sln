@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebShopping.Application", "WebShopping.Application\WebShopping.Application.csproj", "{327FB148-EF9E-4F96-9CD1-DE032391EED3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebShopping.Core", "WebShopping.Core\WebShopping.Core.csproj", "{A36B197C-FFA8-40B1-A37E-D84A39AE605E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{327FB148-EF9E-4F96-9CD1-DE032391EED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{327FB148-EF9E-4F96-9CD1-DE032391EED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{327FB148-EF9E-4F96-9CD1-DE032391EED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{327FB148-EF9E-4F96-9CD1-DE032391EED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A36B197C-FFA8-40B1-A37E-D84A39AE605E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A36B197C-FFA8-40B1-A37E-D84A39AE605E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A36B197C-FFA8-40B1-A37E-D84A39AE605E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A36B197C-FFA8-40B1-A37E-D84A39AE605E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14BE0490-F951-455B-B946-CA51CB4C628F}
+	EndGlobalSection
+EndGlobal
