@@ -7,13 +7,13 @@ namespace WebShopping.Core.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class WebShoppingv14 : IMigrationMetadata
+    public sealed partial class WebShoppingv1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(WebShoppingv14));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(WebShoppingv1));
         
         string IMigrationMetadata.Id
         {
-            get { return "202103220748174_WebShopping-v14"; }
+            get { return "202103240642436_WebShopping-v1"; }
         }
         
         string IMigrationMetadata.Source

@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using WebShopping.Core;
 using WebShopping.Core.Objects;
+using PagedList;
 
 namespace WebShopping.Application.Controllers
 {
@@ -16,17 +17,18 @@ namespace WebShopping.Application.Controllers
         private ShopDbContext db = new ShopDbContext();
 
         // GET: Products
-        public ActionResult Index(FormCollection f)
+        public ActionResult Index(FormCollection f, int? page)
         {
             string search = f["search"];
+            if (page == null) page = 1;
+            var pageSize = 8;
+            var pageNumber = (page ?? 1);
             var products = db.Products.OrderByDescending(p => p.Id);
-            int i = 1;
-            ViewBag.count = i++;
             if (search != null)
             {
-                return View(products.Where(p => p.Name.Contains(search)).ToList());
+                return View(products.Where(p => p.Name.Contains(search) || p.Supplier.Name.Contains(search) || p.Producer.Name.Contains(search)).ToPagedList(pageNumber, pageSize));
             }
-            return View(products.ToList());
+            return View(products.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Products/Details/5

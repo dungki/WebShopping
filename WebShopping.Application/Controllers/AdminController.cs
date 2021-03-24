@@ -21,7 +21,6 @@ namespace WebShopping.Application.Controllers
             ViewBag.payProduct = TotalProductPaymentMoney();
             ViewBag.order = TotalOrderProseccing();
             ViewBag.totalSuccess = TotalOrderSuccess();
-            ViewBag.person = TotalOrderSuccess() / TotalOrderProseccing() * 100;
             ViewBag.orderFalse = TotalOrderFalse();
             return View();
         }
@@ -44,7 +43,7 @@ namespace WebShopping.Application.Controllers
         public int TotalOrderProseccing()
         {
             var orderSuccess = db.Orders.Where(p => p.Status == 0).ToList();
-            return orderSuccess.Count(); ;
+            return orderSuccess.Count();
         }
         public int TotalOrderSuccess()
         {

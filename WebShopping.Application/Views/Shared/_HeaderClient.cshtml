@@ -36,13 +36,13 @@
                         }
                         else if (member.MemberShipTypeId == 2)
                         {
-                            <li><a href="#" class="title hidden-xs">VIP</a></li>
+                            <li><a href="@Url.Action("Profile","Home",new { id = member.Id })" class="title hidden-xs">VIP</a></li>
                             <li class="hidden-xs">|</li>
                             <li><a href="@Url.Action("Logout","Login")" class="title hidden-xs">Logout</a></li>
                         }
                         else if (member.MemberShipTypeId == 3)
                         {
-                            <li><a href="#" class="title hidden-xs">Normal</a></li>
+                            <li><a href="@Url.Action("Profile","Home",new { id = member.Id })" class="title hidden-xs">Normal</a></li>
                             <li class="hidden-xs">|</li>
                             <li><a href="@Url.Action("Logout","Login")" class="title hidden-xs">Logout</a></li>
                         }

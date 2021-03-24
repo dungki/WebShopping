@@ -211,6 +211,7 @@
     <Content Include="Content\jquery.desoslide.min.css" />
     <Content Include="Content\jquery.rateyo.css" />
     <Content Include="Content\jquery.rateyo.min.css" />
+    <Content Include="Content\member.css" />
     <Content Include="Content\owl.carousel.css" />
     <Content Include="Content\owl.theme.default.css" />
     <Content Include="Content\PagedList.css" />
@@ -241,9 +242,14 @@
     <Content Include="images\feature_icon_3.png" />
     <Content Include="images\google_logo.png" />
     <Content Include="images\htc.png" />
+    <Content Include="images\imageslideriphone8plus.png" />
     <Content Include="images\inquiry_icon.png" />
     <Content Include="images\iphone.png" />
+    <Content Include="images\iphone12_800x450.jpg" />
+    <Content Include="images\iphonw12.jpg" />
+    <Content Include="images\laptop2_800x450.jpg" />
     <Content Include="images\nexus.png" />
+    <Content Include="images\oppo.jpg" />
     <Content Include="images\pixel.png" />
     <Content Include="images\productdemo\alcatel-removebg-preview.png" />
     <Content Include="images\productdemo\alcatel1-removebg-preview.png" />
@@ -2352,6 +2358,7 @@
     <Content Include="Views\OrderDetails\Details.cshtml" />
     <Content Include="Views\OrderDetails\Edit.cshtml" />
     <Content Include="Views\OrderDetails\Index.cshtml" />
+    <Content Include="Views\Home\Profile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

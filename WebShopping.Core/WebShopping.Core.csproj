@@ -54,61 +54,9 @@
     <Compile Include="IRepository\ICartRepository.cs" />
     <Compile Include="IRepository\ILoginRepository.cs" />
     <Compile Include="IRepository\IProductRepository.cs" />
-    <Compile Include="Migrations\202103140303050_WebShopping-v1.cs" />
-    <Compile Include="Migrations\202103140303050_WebShopping-v1.Designer.cs">
-      <DependentUpon>202103140303050_WebShopping-v1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103140953029_WebShopping-v2.cs" />
-    <Compile Include="Migrations\202103140953029_WebShopping-v2.Designer.cs">
-      <DependentUpon>202103140953029_WebShopping-v2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103150229570_WebShopping-v3.cs" />
-    <Compile Include="Migrations\202103150229570_WebShopping-v3.Designer.cs">
-      <DependentUpon>202103150229570_WebShopping-v3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103170806483_WebShopping-v4.cs" />
-    <Compile Include="Migrations\202103170806483_WebShopping-v4.Designer.cs">
-      <DependentUpon>202103170806483_WebShopping-v4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103170809185_WebShopping-v5.cs" />
-    <Compile Include="Migrations\202103170809185_WebShopping-v5.Designer.cs">
-      <DependentUpon>202103170809185_WebShopping-v5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103170816369_WebShopping-v6.cs" />
-    <Compile Include="Migrations\202103170816369_WebShopping-v6.Designer.cs">
-      <DependentUpon>202103170816369_WebShopping-v6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103170834183_WebShopping-v7.cs" />
-    <Compile Include="Migrations\202103170834183_WebShopping-v7.Designer.cs">
-      <DependentUpon>202103170834183_WebShopping-v7.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103170847342_WebShopping-v8.cs" />
-    <Compile Include="Migrations\202103170847342_WebShopping-v8.Designer.cs">
-      <DependentUpon>202103170847342_WebShopping-v8.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103180314272_WebShopping-v9.cs" />
-    <Compile Include="Migrations\202103180314272_WebShopping-v9.Designer.cs">
-      <DependentUpon>202103180314272_WebShopping-v9.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103180423357_WebShopping-v10.cs" />
-    <Compile Include="Migrations\202103180423357_WebShopping-v10.Designer.cs">
-      <DependentUpon>202103180423357_WebShopping-v10.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103180754302_WebShopping-v11.cs" />
-    <Compile Include="Migrations\202103180754302_WebShopping-v11.Designer.cs">
-      <DependentUpon>202103180754302_WebShopping-v11.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103191001498_WebShopping-v12.cs" />
-    <Compile Include="Migrations\202103191001498_WebShopping-v12.Designer.cs">
-      <DependentUpon>202103191001498_WebShopping-v12.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103191020098_WebShopping-v13.cs" />
-    <Compile Include="Migrations\202103191020098_WebShopping-v13.Designer.cs">
-      <DependentUpon>202103191020098_WebShopping-v13.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103220748174_WebShopping-v14.cs" />
-    <Compile Include="Migrations\202103220748174_WebShopping-v14.Designer.cs">
-      <DependentUpon>202103220748174_WebShopping-v14.cs</DependentUpon>
+    <Compile Include="Migrations\202103240642436_WebShopping-v1.cs" />
+    <Compile Include="Migrations\202103240642436_WebShopping-v1.Designer.cs">
+      <DependentUpon>202103240642436_WebShopping-v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Objects\Comment.cs" />
@@ -134,49 +82,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202103140303050_WebShopping-v1.resx">
-      <DependentUpon>202103140303050_WebShopping-v1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103140953029_WebShopping-v2.resx">
-      <DependentUpon>202103140953029_WebShopping-v2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103150229570_WebShopping-v3.resx">
-      <DependentUpon>202103150229570_WebShopping-v3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103170806483_WebShopping-v4.resx">
-      <DependentUpon>202103170806483_WebShopping-v4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103170809185_WebShopping-v5.resx">
-      <DependentUpon>202103170809185_WebShopping-v5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103170816369_WebShopping-v6.resx">
-      <DependentUpon>202103170816369_WebShopping-v6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103170834183_WebShopping-v7.resx">
-      <DependentUpon>202103170834183_WebShopping-v7.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103170847342_WebShopping-v8.resx">
-      <DependentUpon>202103170847342_WebShopping-v8.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103180314272_WebShopping-v9.resx">
-      <DependentUpon>202103180314272_WebShopping-v9.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103180423357_WebShopping-v10.resx">
-      <DependentUpon>202103180423357_WebShopping-v10.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103180754302_WebShopping-v11.resx">
-      <DependentUpon>202103180754302_WebShopping-v11.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103191001498_WebShopping-v12.resx">
-      <DependentUpon>202103191001498_WebShopping-v12.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103191020098_WebShopping-v13.resx">
-      <DependentUpon>202103191020098_WebShopping-v13.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103220748174_WebShopping-v14.resx">
-      <DependentUpon>202103220748174_WebShopping-v14.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202103240642436_WebShopping-v1.resx">
+      <DependentUpon>202103240642436_WebShopping-v1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

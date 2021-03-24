@@ -1,0 +1,95 @@
+﻿@using WebShopping.Core.Objects;
+
+@model WebShopping.Core.Objects.Member
+
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_LayoutClient.cshtml";
+    Member member = Session["Login"] as Member;
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-4 pb-5">
+            <!-- Account Sidebar-->
+            <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);max-width:300px;margin:auto;text-align:center">
+                <h1 style="padding-top:13px">Profile</h1>
+                <p class="title" style="color:grey;font-size:18px;">@Model.Name</p>
+                <p>@Model.Address</p>
+                <p>@Model.Phone</p>
+                <p>@Model.Email</p>
+                <div style="margin: 24px 0;">
+                    <a href="#" style="text-decoration:none;font-size:22px;color:black"><i class="fa fa-dribbble"></i></a>
+                    <a href="#" style="text-decoration:none;font-size:22px;color:black"><i class="fa fa-twitter"></i></a>
+                    <a href="#" style="text-decoration:none;font-size:22px;color:black"><i class="fa fa-linkedin"></i></a>
+                    <a href="#" style="text-decoration:none;font-size:22px;color:black"><i class="fa fa-facebook"></i></a>
+                </div>
+                <p><a href="tel:@Model.Phone" style="border:none;outline:0;display:inline-block;padding:12px;color:white;background-color:#000;text-align:center;cursor:pointer;width:100%;font-size:18px">Contact</a></p>
+            </div>
+        </div>
+        <!-- Profile Settings-->
+        <div class="col-lg-8 pb-5">
+            @using (Html.BeginForm("UpdateProfile", "Home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                @Html.HiddenFor(model => model.Id)
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="account-fn">Account</label>
+                            @Html.EditorFor(model => model.Account, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Account, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="account-ln">Full Name</label>
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="account-email">E-mail Address</label>
+                            <input class="form-control" type="email" name="Email" value="@Model.Email" disabled="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="account-phone">Phone Number</label>
+                            @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="account-pass">Old Password</label>
+                            <input class="form-control" type="password" name="OldPassword" placeholder="">
+                            <span style="color:@TempData["Style"]">
+                                <i class="fa @TempData["Icon"]" style="color:@TempData["Style"]" aria-hidden="true"></i>
+                                @TempData["Mess"]
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="account-confirm-pass">New Password</label>
+                            <input class="form-control" type="password" name="NewPassword">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <hr class="mt-2 mb-3">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center">
+                            <div class="custom-control custom-checkbox d-block">
+                            </div>
+                            <button class="btn btn-style-1 btn-primary" type="submit" data-toast="" data-toast-position="topRight" data-toast-type="success" data-toast-icon="fe-icon-check-circle" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Update Profile</button>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+</div>
+<br /><br /><br /><br />

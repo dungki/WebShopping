@@ -26,6 +26,7 @@ namespace WebShopping.Application
                       "~/Content/bootstrap.css",
                       "~/Content/bootstrap.min.css",
                       "~/Content/style.css",
+                      "~/Content/member.css",
                       "~/Content/owl.carousel.css",
                       "~/Content/owl.theme.default.css",
                       "~/Content/font-awesome.min.css"

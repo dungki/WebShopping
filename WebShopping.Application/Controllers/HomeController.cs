@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebShopping.Core;
+using WebShopping.Core.Objects;
 
 namespace WebShopping.Application.Controllers
 {
@@ -28,10 +29,40 @@ namespace WebShopping.Application.Controllers
 
             return View();
         }
-        public ActionResult Customer()
+        public ActionResult Profile(int? id)
         {
-            var cus = db.Customers.ToList();
-            return View(cus);
+            if (id == null)
+            {
+                return RedirectToAction("Index", "Products");
+            }
+            Member member = db.Members.Find(id);
+            return View(member);
+        }
+        public ActionResult UpdateProfile(FormCollection f)
+        {
+            int id = Int32.Parse(f["Id"]);
+            Member member = db.Members.Single(p => p.Id == id);
+            if (!String.IsNullOrEmpty(f["OldPassword"]))
+            {
+                string oldPass = f["OldPassword"];
+                if (member.Password != oldPass)
+                {
+                    TempData["Mess"] = "Old Password Is Incorrect.";
+                    TempData["Icon"] = "fa-info-circle";
+                    TempData["Style"] = "red";
+                    return RedirectToAction("Profile",new { id = id });
+                }
+            }
+            if (!String.IsNullOrEmpty(f["NewPassword"]))
+            {
+                string newPass = f["NewPassword"];
+                member.Password = newPass;
+            }
+            db.SaveChanges();
+            TempData["Icon"] = "fa-check-circle";
+            TempData["Mess"] = "Password Changed Successfully";
+            TempData["Style"] = "green";
+            return RedirectToAction("Profile",new { id = id });
         }
     }
 }

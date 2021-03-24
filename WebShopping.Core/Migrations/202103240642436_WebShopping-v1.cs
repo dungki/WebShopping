@@ -28,7 +28,9 @@ namespace WebShopping.Core.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Account = c.String(),
-                        Passworđ = c.String(),
+                        Address = c.String(),
+                        Name = c.String(),
+                        Password = c.String(),
                         Email = c.String(),
                         Phone = c.String(),
                         Question = c.String(),
@@ -59,11 +61,8 @@ namespace WebShopping.Core.Migrations
                         UpdateDay = c.DateTime(nullable: false),
                         Configuration = c.String(),
                         Description = c.String(),
-                        View = c.Int(nullable: false),
+                        Image = c.String(),
                         QuantityInStock = c.Int(nullable: false),
-                        Vote = c.Int(nullable: false),
-                        NewProduct = c.Int(nullable: false),
-                        NumberOfTimesPurchased = c.Int(nullable: false),
                         Deleted = c.Boolean(nullable: false),
                         SupplierId = c.Int(nullable: false),
                         ProducerId = c.Int(nullable: false),
@@ -123,8 +122,9 @@ namespace WebShopping.Core.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
                         Quantity = c.Int(nullable: false),
-                        Endow = c.Int(nullable: false),
+                        UnitPrice = c.Decimal(nullable: false, precision: 18, scale: 2),
                         OrderId = c.Int(nullable: false),
                         ProductId = c.Int(nullable: false),
                     })
@@ -140,9 +140,11 @@ namespace WebShopping.Core.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         OrderDate = c.DateTime(nullable: false),
-                        Status = c.Boolean(nullable: false),
+                        Status = c.Int(nullable: false),
                         DeliveryDate = c.DateTime(nullable: false),
                         Payment = c.Boolean(nullable: false),
+                        Cancel = c.Boolean(nullable: false),
+                        Deleted = c.Boolean(nullable: false),
                         Endow = c.Int(nullable: false),
                         CustomerId = c.Int(nullable: false),
                     })
@@ -155,14 +157,14 @@ namespace WebShopping.Core.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
+                        Name = c.String(nullable: false),
                         Address = c.String(),
                         Email = c.String(),
                         Phone = c.String(),
-                        MemberId = c.Int(nullable: false),
+                        MemberId = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Members", t => t.MemberId, cascadeDelete: true)
+                .ForeignKey("dbo.Members", t => t.MemberId)
                 .Index(t => t.MemberId);
             
             CreateTable(

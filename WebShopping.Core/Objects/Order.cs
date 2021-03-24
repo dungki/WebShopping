@@ -17,7 +17,7 @@ namespace WebShopping.Core.Objects
         public bool Cancel { get; set; }
         public bool Deleted { get; set; }
         public int Endow { get; set; } //uu dai
-        public int? CustomerId { get; set; }
+        public int CustomerId { get; set; }
         [ForeignKey("CustomerId")]
         public virtual Customer Customer { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
